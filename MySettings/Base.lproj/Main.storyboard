@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MySettings" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYh-qb-ODH">
+                                <rect key="frame" x="283" y="353" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="btnSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i7w-nD-isN"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yak-y3-6gF">
+                                <rect key="frame" x="252" y="53" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="PWS-C6-N8k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fP-FV-6Hq">
+                                <rect key="frame" x="252" y="91" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bge-Q1-4gP">
+                                <rect key="frame" x="0.0" y="129" width="600" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELm-61-MTo">
+                                <rect key="frame" x="282" y="429" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="btnClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fvX-VP-LIQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8g-Ta-q7r">
+                                <rect key="frame" x="283" y="391" width="34" height="30"/>
+                                <state key="normal" title="Load"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bge-Q1-4gP" firstAttribute="centerX" secondItem="gYh-qb-ODH" secondAttribute="centerX" id="3kM-fj-xbc"/>
+                            <constraint firstItem="yak-y3-6gF" firstAttribute="trailing" secondItem="9fP-FV-6Hq" secondAttribute="trailing" id="56g-MY-pqe"/>
+                            <constraint firstItem="9fP-FV-6Hq" firstAttribute="top" secondItem="yak-y3-6gF" secondAttribute="bottom" constant="8" symbolic="YES" id="6bz-Ov-cSL"/>
+                            <constraint firstItem="yak-y3-6gF" firstAttribute="leading" secondItem="9fP-FV-6Hq" secondAttribute="leading" id="9tg-LB-l8F"/>
+                            <constraint firstItem="Bge-Q1-4gP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ck3-Ya-pJo"/>
+                            <constraint firstItem="gYh-qb-ODH" firstAttribute="top" secondItem="Bge-Q1-4gP" secondAttribute="bottom" constant="8" symbolic="YES" id="Fio-ya-4oL"/>
+                            <constraint firstItem="Bge-Q1-4gP" firstAttribute="top" secondItem="9fP-FV-6Hq" secondAttribute="bottom" constant="8" symbolic="YES" id="KOf-qy-69J"/>
+                            <constraint firstItem="yak-y3-6gF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="LgM-7k-lyh"/>
+                            <constraint firstItem="j8g-Ta-q7r" firstAttribute="top" secondItem="gYh-qb-ODH" secondAttribute="bottom" constant="8" symbolic="YES" id="bKG-pY-9iP"/>
+                            <constraint firstItem="gYh-qb-ODH" firstAttribute="leading" secondItem="j8g-Ta-q7r" secondAttribute="leading" id="icT-DN-HK2"/>
+                            <constraint firstItem="9fP-FV-6Hq" firstAttribute="centerX" secondItem="Bge-Q1-4gP" secondAttribute="centerX" id="kgE-oj-Igg"/>
+                            <constraint firstAttribute="trailing" secondItem="Bge-Q1-4gP" secondAttribute="trailing" id="r4q-dc-lEu"/>
+                            <constraint firstItem="j8g-Ta-q7r" firstAttribute="centerX" secondItem="ELm-61-MTo" secondAttribute="centerX" id="r6l-SY-8Uh"/>
+                            <constraint firstItem="ELm-61-MTo" firstAttribute="top" secondItem="j8g-Ta-q7r" secondAttribute="bottom" constant="8" symbolic="YES" id="rnK-Lk-5a3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="address" destination="9fP-FV-6Hq" id="Zkk-jM-BEl"/>
+                        <outlet property="fullname" destination="yak-y3-6gF" id="Xo1-Cd-wCA"/>
+                        <outlet property="yearPicker" destination="Bge-Q1-4gP" id="coR-GF-dmm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
